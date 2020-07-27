@@ -9,6 +9,7 @@ class nginx (
   $config_path   = $nginx::params::config_path,
   $config_source = $nginx::params::config_source,
   $config_name   = $nginx::params::service_name,
+  $vhosts_dir    = $nginx::params::vhosts_dir,
   String $package_ensure,
   String $config_ensure,
   String $service_ensure,
