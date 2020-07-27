@@ -1,0 +1,2 @@
+# puppetnginx
+puppet nginx build
