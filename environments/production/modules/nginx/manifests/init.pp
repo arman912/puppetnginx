@@ -28,5 +28,5 @@ class nginx (
   Class['nginx::install']
   -> Class['nginx::config']
   ~> Class['nginx::service']
-  ~> Class['nginx::vhosts']
+  -> Class['nginx::vhosts']
 }
