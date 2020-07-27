@@ -17,13 +17,16 @@ class nginx (
   Boolean $service_hasrestart,
   String $vhosts_port,
   String $vhosts_root,
+  String $vhosts_ensure,
   String $vhosts_name,
 ) inherits nginx::params {
   contain nginx::install
   contain nginx::config
   contain nginx::service
+  contain nginx::vhosts
 
   Class['nginx::install']
   -> Class['nginx::config']
   ~> Class['nginx::service']
+  ~> Class['nginx::vhosts']
 }

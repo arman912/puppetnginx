@@ -10,7 +10,7 @@ class nginx::service (
   service { 'nginx_service':
     name       => $service_name,
     ensure     => $nginx::service_ensure,
-    enable     => $ngnix::service_enable,
-    hasrestart => $ngnix::sevice_hasrestart,
+    enable     => $nginx::service_enable,
+    hasrestart => $nginx::sevice_hasrestart,
   }
 }
